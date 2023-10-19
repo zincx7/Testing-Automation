@@ -38,7 +38,7 @@ public class Saucedemo {
         driver.get(baseurl);
 
         driver.findElement(By.id("user-name")).sendKeys(auth.username);
-        driver.findElement(By.id("password")).sendKeys("blabla");
+        driver.findElement(By.id("password")).sendKeys("blablaa");
         driver.findElement(By.id("login-button")).click();
 
         Assert.assertEquals(auth.password,"blabla");
