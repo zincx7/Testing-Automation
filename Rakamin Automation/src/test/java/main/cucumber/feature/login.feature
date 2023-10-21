@@ -19,7 +19,7 @@ Feature: Log in to application
     When User insert Username with the list provided
     And User insert password with the list provided
     And User click login button
-    And User on Dashboard Page
+    Then User on main Page
     When User click burger menu
     And User click Logout
     Then User on landing page
@@ -29,7 +29,7 @@ Feature: Log in to application
     When User insert Username with the list provided
     And User insert password with the list provided
     Then User click login button
-    And User on Dashboard Page
+    And User on Dashboard Page to doing transaction
     Then User Add Product to cart
     And User click to cart
     Then User click Checkout Button

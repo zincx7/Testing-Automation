@@ -46,10 +46,12 @@ public class login {
     }
 
     @Then("User on Dashboard Page")
-    public void userOnDashboardPage() {
+    public void userOnDashboardPage(){
         WebElement judul = driver.findElement(By.className("app_logo"));
         Assert.assertEquals("Swag Labs", judul.getText());
+        driver.quit();
     }
+
 
     @And("User insert invalid password with the list provided")
     public void userInsertInvalidPasswordWithTheListProvided() {
@@ -62,6 +64,11 @@ public class login {
         String error = "Epic sadface: Username and password do not match any user in this service";
         Assert.assertEquals(errorMessage, error);
         driver.quit();
+    }
+    @Then("User on main Page")
+    public void userOnMainPage() {
+        WebElement judul = driver.findElement(By.className("app_logo"));
+        Assert.assertEquals("Swag Labs", judul.getText());
     }
 
     @When("User click burger menu")
@@ -82,6 +89,12 @@ public class login {
         driver.quit();
     }
 
+    @And("User on Dashboard Page to doing transaction")
+    public void userOnDashboardPageToDoingTransaction() {
+        WebElement judul = driver.findElement(By.className("app_logo"));
+        Assert.assertEquals("Swag Labs", judul.getText());
+
+    }
     @And("User Add Product to cart")
     public void userAddProductToCart() {
         driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
@@ -149,5 +162,8 @@ public class login {
             Thread.currentThread().interrupt();
         }
     }
+
+
+
 }
 
