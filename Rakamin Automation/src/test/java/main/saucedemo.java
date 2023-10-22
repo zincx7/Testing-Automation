@@ -91,9 +91,6 @@ public class saucedemo {
 
             WebElement e2 = driver.findElement(By.className("button"));
             e2.getText();
-
-            driver.findElement(By.xpath("/*contains")).isDisplayed();
-
             driver.close();
 
         }
